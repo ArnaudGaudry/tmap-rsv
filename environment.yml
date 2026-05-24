@@ -1,0 +1,25 @@
+name: tmap_rsv
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  - nlesc
+  - tmap
+dependencies:
+  - python=3.9
+  - ipykernel
+  - faerun
+  - matchms
+  - pandas
+  - pip
+  - pip:
+    - git+https://github.com/reymond-group/map4
+    - sparqlwrapper
+  - matplotlib
+  - plotly
+  - python-kaleido
+  - rdkit
+  - requests
+  - scipy
+  - spec2vec
+  - tmap

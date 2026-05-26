@@ -224,7 +224,6 @@ def _(Path, os, pd, pickle):
         descriptors = pd.read_csv(set_attributes_path)
 
         return coordinates, descriptors
-
     return (load_tmap,)
 
 
@@ -557,7 +556,7 @@ def _(
     np,
     ss,
 ):
-    output_dir_lotus = '260223_lotus_tmap'
+    output_dir_lotus = '260526_lotus_tmap'
 
     descriptors_annot_lotus["labels"] = (
             descriptors_annot_lotus["smiles"]
@@ -578,7 +577,7 @@ def _(
         labels2, data2 = Faerun.create_categories(descriptors_annot_lotus[str(dic2)])
         dic_categories2[dic2]['data'], dic_categories2[dic2]['labels'] = Top_N_classes(dic_categories2[dic2]['Ncat'], data2, labels2)
 
-    cmap2 = mcolors.ListedColormap(['#e6e6e6', "#023047"])
+    cmap2 = mcolors.ListedColormap(['#e6e6e6', "#002FA7"])
 
     f2 = Faerun(view="front", coords=False,  clear_color='#ffffff')
     f2.add_scatter(
@@ -597,7 +596,7 @@ def _(
         },
         shader="smoothCircle",
         point_scale=7.0,
-        max_point_size=5,
+        max_point_size=10,
         legend_labels=[
             dic_categories2['annotated']['labels']
             ],
